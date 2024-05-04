@@ -7,6 +7,7 @@
     <title>Focus On Today</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="lion.png" type="image/x-icon">
     <script src="script.js" defer></script>
 </head>
 
@@ -22,33 +23,49 @@
                     <i class="ri-emotion-happy-fill"></i>
                 </div>
                 <div class="raisebar-content">
-                    <p>Raise the bar by completing your goals.</p>
-                    <div class="raisingbar"></div>
+                    <p class="changing-text">
+                        raise the bar by completing the goals
+                    </p>
+                    <div class="raisingbar">
+                        <div class="actual-bar">
+                            <span>2/3 completed</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="info">Please set all the 3 goals!!!</p>
+                <p class="info">Reminder: First three goals needed!</p>
+                <div class="error-element">
+                    <p class="err" id="hello">can't allowed to add more than 5. sorry ⚡</p>
+                </div>
                 <div class="all-selections">
                     <div class="select-section ">
-                      <div class="checkbox-circle" data-named="1"><svg class="svg-savag" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="checkbox-circle"><svg class="svg-savag" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 4.11111L3.20098 7.12635C3.54481 7.59737 4.21708 7.67546 4.65973 7.29581L12 1" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round"/>
                         </svg></div>
-                        <input class="texty" type="text" placeholder="Add a new goal..">
+                        <input data-info="first" class="texty" type="text" placeholder="Add a new goal..">
                     </div>
                     <div class="select-section">
-                      <div class="checkbox-circle" data-named="2">
-                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="checkbox-circle">
+                        <svg class="svg-savag" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 4.11111L3.20098 7.12635C3.54481 7.59737 4.21708 7.67546 4.65973 7.29581L12 1" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                       </div>
-                        <input class="texty" type="text" placeholder="Add a new goal..">
+                        <input data-info="second" class="texty" type="text" placeholder="Add a new goal..">
                     </div>
                     <div class="select-section">
-                      <div class="checkbox-circle" data-named="3">
-                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="checkbox-circle">
+                        <svg class="svg-savag" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 4.11111L3.20098 7.12635C3.54481 7.59737 4.21708 7.67546 4.65973 7.29581L12 1" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                       </div>
-                        <input class="texty" type="text" placeholder="Add a new goal..">
+                        <input data-info="third" class="texty" type="text" placeholder="Add a new goal..">
                     </div>
+                    <div class="dynamic-element">
+      
+                    </div>
+                </div>
+                <div class="add-input">
+                  <div class="add-button">Add Goal</div>
+                  <div class="remove-button">Remove Goal</div>
                 </div>
                 <footer class="identity">
                     <h3>"Move one step ahead, today!"</h3>

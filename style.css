@@ -1,8 +1,13 @@
+@font-face {
+    font-family: Prajwol;
+    src: url(/First\ Wave\ -\ Personal\ Use.otf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: cursive;
+    
 }
 
 html , body{
@@ -20,28 +25,33 @@ html , body{
     width:100%;
     height:20vh;
     margin-bottom:2vw;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .lower-div{
     width: 100%;
- min-height:calc(120vh - 20vh);
+    min-height:calc(120vh - 20vh);
 }
 
 /* working on upper-div */
 .upper-div h1{
+    font-family: prajwol;
     font-size:6vw;
     text-align: center;
-    word-spacing: -7px;
+    /* word-spacing: -7px; */
     font-weight:800;
 }
 .upper-div h1{
     color:#48A300
 }
 .upper-div h1 span{
+    font-family: prajwol;
     color:#61481C;
 }
 
 /* working on lower-div */
+
 .lower-div .content-div{
     width:50%;
     height: 100%;
@@ -50,6 +60,7 @@ html , body{
     border-radius:32px;
     position: relative;
     padding:2.3vw;
+   
 }
 
 .top-content{
@@ -70,10 +81,13 @@ html , body{
 }
 
 .content-div .info{
-    margin:2vw 0;
+    margin:1vw 0;
     font-size:1.1vw;
     color:rgba(235, 29, 29, 0.829);
-
+    visibility:hidden; 
+}
+.extrainfo .info{
+   visibility:visible;
 }
 
 /* working on raising bar */
@@ -82,7 +96,7 @@ html , body{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap:7px;
+    gap:10px;
     margin-bottom: 1vw;
 }
 .raisebar-content p{
@@ -95,13 +109,34 @@ html , body{
     height:2.1vw;
     background-color:#e9f2e2;
     border-radius: 32px;
+    overflow:hidden;
+}
+.raisingbar .actual-bar{
+    border-radius: 32px;
+    width:0%;
+    background-color: #48A300;
+    height:100%;
+    display:flex;
+    align-items: center;
+    overflow:hidden;
+    transition:width 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.actual-bar span{
+    display:block;
+    display:flex;
+    align-items: center;
+    color:white;
+    min-width:max-content;
+    font-size: 10px;
+    padding-left:2vw;
+
 }
 
 /* working on select-section */
 .all-selections{
     display:flex;
     flex-direction: column;
-    gap:25px;
+    gap:30px;
     padding:1vw;
 }
 .select-section{
@@ -137,8 +172,9 @@ html , body{
    display:flex;
    justify-content: center;
    align-items: center;
+   cursor:pointer;
 }
-.completed .checkbox-circle{
+.completed .checkbox-circle {
     background-color: #48A300;
     border:#48A300;
 }
@@ -146,7 +182,6 @@ html , body{
     text-decoration-line: line-through;
     color:#48A300;
 }
-
 
 /* working on footer-part */
 .identity{
@@ -168,5 +203,205 @@ html , body{
     color:red;
 }
 
+@media (max-width:768px) {
+    .top-content h2{
+        font-size: 15px;
+    }
+    .upper-div{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height:15vh;
+        margin-bottom:1vw;
+       
+    }
+    .upper-div h1{
+        font-size:50px;
+        text-align: center;
+        word-spacing: -7px;
+        font-weight:800;
+    }
+    .lower-div{
+        width: 100%;
+     min-height:calc(100vh - 20vh);
+    }
+    .top-content i{
+        font-size:30px;
+        color:rgb(250, 206, 60);
+    }
+    .lower-div .content-div{
+        width:80%;
+        height: 100%;
+        margin:auto;
+        border-radius:22px;
+    }
+    .raisebar-content{
+        gap:5px;
+        margin-bottom: 1vw;
+    }
+    .raisebar-content p{
+        font-size:15px;
+        opacity: .5;
+        margin: 5px;
+    }
+    .raisebar-content .raisingbar{
+        width:100%;
+        height:20px;
+        background-color:#e9f2e2;
+        border-radius: 32px;
+    }
+    
+    .all-selections{
+        margin-top:20px;
+    }
+    .select-section{
+        width: 100%;
+        height:6vh;
+        display: flex;
+        align-items: center;
+    }
+    .dynamic-element .select-Prajwol{
+        width:100%;
+        height:6vh;
+    }
+    .checkbox-circle{
+        height: 20px;
+        width:20px;
+     }
+    .dynamic-element .box-circle{
+        height:20px;
+        width:20px;
+     }
 
+/* start of identity part */
+     .identity h3{
+        font-size:15px;
+    }
+    .identity p{
+        font-size:12px;
+        opacity:.5;
+    }
+    .identity{
+        gap:25px;
+        margin-top:25px; 
+    }
+    .content-div .info{
+        font-size:15px;
+    }
+   #hello{
+       font-size:15px;
+    }
+    
+}
+
+/* For dynamic element... styles are presented here */
+.add-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    height:20px;
+    width:100%;
+}
+.add-button{
+    border:1px solid black;
+    padding-block:7px;
+    padding-inline:15px;
+    border-radius: 10px;
+    font-size:12px; 
+    cursor:pointer;
+    font-weight:700;
+}
+.remove-button{
+    border:1px solid white;
+    padding-block:7px;
+    padding-inline:15px;
+    border-radius: 10px;
+    font-size:12px;
+    cursor:pointer;
+    font-weight:700;
+    background-color: #48A300;
+    color:white
+
+}
+.add-button:hover{
+    background-color: #48A300;
+    color:white;
+    border:1px solid #48A300;
+    transition:background 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.remove-button:hover{
+    background-color:white;
+    color:black;
+    border:1px solid black;
+    transition:background 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.dynamic-element{
+    width: 100%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+ .select-Prajwol{
+    width: 100%;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    border-radius:10px;
+    border:2px solid #c7bfbfbe;
+    padding-left:2vw;   
+}
+[type="text"]{
+    width:100%;
+    border-style: none;
+    padding:1vw;
+    padding-left:2vw;
+    opacity:.5; 
+    outline-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: pink; */
+    align-self:stretch;
+}
+
+.fill .box-circle{
+    background-color: #48A300;
+    border:1px solid #48A300;  
+}
+
+.fill .testy{
+    text-decoration:line-through;
+    color:#48A300;
+}
+.addition-one, .addition-two{
+    display:none;
+}
+
+.box-circle{
+   height: 25px;
+   width:25px;
+   /* background-color: pink; */
+   border-radius:50%;
+   flex-shrink: 0;
+   border:2px solid black;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   cursor:pointer;
+}
+.error-element .err{
+    margin:1vw 0;
+    font-size:1.1vw;
+    color:rgba(235, 29, 29, 0.829);
+    visibility:hidden; 
+}
+
+.altraextra .err{
+    visibility:visible;
+}
 
