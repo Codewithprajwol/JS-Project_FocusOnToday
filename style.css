@@ -110,8 +110,8 @@ html , body{
     /* background-color: aqua; */
     display: flex;
     align-items: center;
-    gap:15px;
-    padding:1vw;
+    /* gap:15px; */
+    /* padding:1vw; */
     border-radius:10px;
     border:2px solid #c7bfbfbe;
     padding-left:2vw;   
@@ -120,13 +120,33 @@ html , body{
     width:100%;
     border-style: none;
     padding:1vw;
+    padding-left:2vw;
     opacity:.5; 
     outline-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: pink; */
+    align-self:stretch;
 }
-[type="radio"]{
-   transform: scale(1.5);
+.checkbox-circle{
+   height: 25px;
+   width:25px;
+   /* background-color: pink; */
+   border-radius:50%;
+   flex-shrink: 0;
+   border:2px solid black;
+   display:flex;
+   justify-content: center;
+   align-items: center;
 }
+.completed .checkbox-circle{
+    background-color: #48A300;
+    border:#48A300;
+}
+.completed .texty{
+    text-decoration-line: line-through;
+    color:#48A300;
+}
+
 
 /* working on footer-part */
 .identity{
